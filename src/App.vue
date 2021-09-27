@@ -32,7 +32,8 @@ export default {
           description:
             '刻んだ野菜をアボカドと混ぜてディップに。こんがり焼いたバゲットとお召し上がりください。',
           price: 480,
-          image: '/images/item1.jpg'
+          image: '/images/item1.jpg',
+          soldOut: false
         },
         {
           id: 2,
@@ -40,7 +41,7 @@ export default {
           description:
             '子供のころに食べたかった、あのホットケーキを再現しました。素朴でどこか懐かしい味をどうぞ。',
           price: 1180,
-          image: '/images/item2.jpg'
+          image: '/images/item2.jpg',
           soldOut: false
         },
         {
