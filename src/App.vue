@@ -41,6 +41,7 @@ export default {
             '子供のころに食べたかった、あのホットケーキを再現しました。素朴でどこか懐かしい味をどうぞ。',
           price: 1180,
           image: '/images/item2.jpg'
+          soldOut: false
         },
         {
           id: 3,
@@ -57,7 +58,8 @@ export default {
           description:
             'イタリア産チーズをたっぷりかけたアツアツのフレンチフライ。みんな大好きな一品です。',
           price: 670,
-          image: '/images/item4.jpg'
+          image: '/images/item4.jpg',
+          soldOut: false
         }
       ]
     }
@@ -151,5 +153,9 @@ body {
 .item > div.description > span > .price {
   font-size: 28px;
   font-weight: bold;
+}
+
+.selected-item {
+  background-color: #e3f2fd;
 }
 </style>
