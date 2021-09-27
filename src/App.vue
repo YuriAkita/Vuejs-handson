@@ -1,7 +1,7 @@
 <template>
   <header class="header">
     <img src="/images/logo.svg" alt="" />
-    <h1>Vue.js ハンズオン</h1>
+    <h1>商品紹介ページ</h1>
   </header>
   <main class="main">
   <template v-for="item in items" :key="item.id">
@@ -19,7 +19,17 @@
         <span>¥<span class="price">{{ pricePrefix(item.price) }}</span></span>
       </div>
     </div>
-    <div v-else>売り切れです</div>
+    <div v-else
+    class="item">
+    <div class="thumbnail">
+      <img :src="item.soldOutImage" alt="" />
+    </div>
+    <div class="description">
+      <h2>{{ item.name }}</h2>
+      <p>{{ item.description }}</p>
+      <span>¥<span class="price">{{ pricePrefix(item.price) }}</span></span>
+    </div>
+    </div>
   </template>
   </main>
 </template>
@@ -57,6 +67,7 @@ export default {
             'ロサンゼルス生まれのスパークリングウォーター。ノンカロリー、ノンアルコールの新感覚飲料です。',
           price: 320,
           image: '/images/item3.jpg',
+          soldOutImage: '/images/soldout_item3.png',
           soldOut: true,
           selected: false
         },
