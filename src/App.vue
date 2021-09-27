@@ -5,7 +5,7 @@
   </header>
   <main class="main">
   <template v-for="item in items" :key="item.id">
-    <div class="item">
+    <div v-if="!item.soldOut" class="item">
       <div class="thumbnail">
         <img :src="item.image" alt="" />
       </div>
@@ -15,6 +15,7 @@
         <span>¥<span class="price">{{ item.price }}</span></span>
       </div>
     </div>
+    <div v-else>売り切れです</div>
   </template>
   </main>
 </template>
@@ -47,7 +48,8 @@ export default {
           description:
             'ロサンゼルス生まれのスパークリングウォーター。ノンカロリー、ノンアルコールの新感覚飲料です。',
           price: 320,
-          image: '/images/item3.jpg'
+          image: '/images/item3.jpg',
+          soldOut: true
         },
         {
           id: 4,
