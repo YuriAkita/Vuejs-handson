@@ -12,7 +12,7 @@
       <div class="description">
         <h2>{{ item.name }}</h2>
         <p>{{ item.description }}</p>
-        <span>¥<span class="price">{{ item.price }}</span></span>
+        <span>¥<span class="price">{{ pricePrefix(item.price) }}</span></span>
       </div>
     </div>
     <div v-else>売り切れです</div>
@@ -61,6 +61,11 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    pricePrefix(price) {
+      return price.toLocaleString()
+      }
   }
 }
 </script>
